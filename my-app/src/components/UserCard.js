@@ -14,6 +14,7 @@ class UserCard extends React.Component {
             <p>{this.props.gitData.bio}</p>
             <p>Number of followers: {this.props.gitData.followers}</p>
             <p>Following: {this.props.gitData.following}</p>
+            <p>Follow {this.props.gitData.login}<a href={this.props.gitData.html_url}> Here</a></p>
           </div>
             <FollowersCard followers={this.props.followers}/>
         </div>

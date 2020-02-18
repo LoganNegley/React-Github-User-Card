@@ -12,9 +12,7 @@ class FollowerCard extends React.Component {
             <div className='followerCard'>
                 <h1>{item.login}</h1>
                 <img width='100px'src={item.avatar_url} alt={item.login}/>
-
-                <p>Follow {item.login}<a href={item.html_url}>Here</a></p>
-                
+                <p>Follow {item.login}<a href={item.html_url}> Here</a></p>
             </div>
             ))}
         </div>
