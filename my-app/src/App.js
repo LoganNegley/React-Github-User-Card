@@ -8,8 +8,8 @@ class App extends React.Component {
     super(); 
     this.state = { 
        myData:[],
+       followers:[]
     }
-    console.log(this.state)
   }
 
   componentDidMount(){
@@ -17,7 +17,8 @@ class App extends React.Component {
   .then (res => {
   // res.data
   this.setState({
-    myData:res.data
+    myData:res.data,
+    followers:res.data.followers_url
   });
    console.log(this.state.myData)
   })
