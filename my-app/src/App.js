@@ -3,6 +3,11 @@ import axios from 'axios';
 import UserCard from '../src/components/UserCard';
 import styled from 'styled-components'
 
+// Styles
+const AppContainer = styled.div`
+margin: 0 auto;
+`;
+
 class App extends React.Component {
   constructor() {
     super(); 
@@ -40,9 +45,9 @@ class App extends React.Component {
 
     render(){
       return (
-        <div className="App">
+        <AppContainer className="App">
         <UserCard gitData={this.state.myData} followers={this.state.followers}/>
-        </div>
+        </AppContainer>
       );
 };
 
