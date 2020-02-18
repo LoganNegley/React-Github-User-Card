@@ -15,9 +15,7 @@ class UserCard extends React.Component {
             <p>Number of followers: {this.props.gitData.followers}</p>
             <p>Following: {this.props.gitData.following}</p>
           </div>
-          <div className='followers-container'>
-            <FollowersCard/>
-          </div>
+            <FollowersCard followers={this.props.followers}/>
         </div>
       );
 };

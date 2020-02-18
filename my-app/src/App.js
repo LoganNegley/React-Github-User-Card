@@ -41,7 +41,7 @@ class App extends React.Component {
     render(){
       return (
         <div className="App">
-        <UserCard gitData={this.state.myData}/>
+        <UserCard gitData={this.state.myData} followers={this.state.followers}/>
         </div>
       );
 };

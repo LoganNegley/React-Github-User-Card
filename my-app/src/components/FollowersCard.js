@@ -2,18 +2,23 @@ import React from 'react';
 import '../App';
 
 
-class UserCard extends React.Component {
+class FollowerCard extends React.Component {
+
 
     render(){
       return (
-        <div className='followerCard'>
-        
+        <div className='followers-container'>
+            {this.props.followers.map(item =>(
+            <div className='followerCard'>
+                <img width='100px'src={item.avatar_url} alt={item.login}/>
+                <h1>{item.login}</h1>
+                <p>Follow {item.login}<a href={item.html_url}>Here</a></p>
+                
+            </div>
+            ))}
         </div>
-      );
-};
-
+      )
+}
 }
 
-export default UserCard;
-
-
+export default FollowerCard;
