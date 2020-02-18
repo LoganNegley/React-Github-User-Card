@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
-import UserCard from '../src/UserCard';
+import UserCard from '../src/components/UserCard';
 
 class App extends React.Component {
   constructor() {
@@ -13,16 +13,27 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    // fetching user info
   axios.get('https://api.github.com/users/LoganNegley')
   .then (res => {
   // res.data
   this.setState({
     myData:res.data,
-    followers:res.data.followers_url
   });
    console.log(this.state.myData)
   })
-  .catch(err => console.log(err)
+  .catch(err => console.log(err, 'user not found')
+  );
+
+// fetching followers 
+    axios.get('https://api.github.com/users/LoganNegley/followers')
+  .then (res => {
+  console.log(res.data)
+  // this.setState({
+  //   followers:,
+  // });
+  })
+  .catch(err => console.log(err, "followers not found")
   );
 }
 
@@ -37,3 +48,4 @@ class App extends React.Component {
 }
 
 export default App;
+
