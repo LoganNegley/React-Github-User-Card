@@ -28,10 +28,11 @@ class App extends React.Component {
 // fetching followers 
     axios.get('https://api.github.com/users/LoganNegley/followers')
   .then (res => {
-  console.log(res.data)
-  // this.setState({
-  //   followers:,
-  // });
+ 
+  this.setState({
+    followers:res.data,
+  });
+     console.log(this.state.followers)
   })
   .catch(err => console.log(err, "followers not found")
   );
