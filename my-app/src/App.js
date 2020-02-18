@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import UserCard from '../src/components/UserCard';
+import styled from 'styled-components'
 
 class App extends React.Component {
   constructor() {
