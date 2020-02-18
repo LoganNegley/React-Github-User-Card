@@ -10,7 +10,7 @@ class UserCard extends React.Component {
         <div className="Usercard-container">
           <div className='userCard'>
             <h1>{this.props.gitData.login}</h1>
-            <img src={this.props.avatar_url}/>
+            <img width='100px'src={this.props.gitData.avatar_url} alt={this.props.gitData.login}/>
             <p>{this.props.gitData.bio}</p>
             <p>Number of followers: {this.props.gitData.followers}</p>
             <p>Following: {this.props.gitData.following}</p>
