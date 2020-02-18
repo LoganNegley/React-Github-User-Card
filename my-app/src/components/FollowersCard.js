@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App';
+
 
 
 class FollowerCard extends React.Component {
