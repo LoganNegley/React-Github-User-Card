@@ -1,5 +1,20 @@
 import React from 'react';
+import styled from 'styled-components'
 
+
+const Card = styled.div`
+border:black solid 2px;
+border-radius:5px;
+margin:5px;
+text-align:center;
+background-color:#3eff09;
+
+`;
+const Heading = styled.div`
+text-decoration:underline;
+font-size:35px;
+font-weight:bold;
+`;
 
 
 class FollowerCard extends React.Component {
@@ -9,11 +24,11 @@ class FollowerCard extends React.Component {
       return (
         <div className='followers-container'>
             {this.props.followers.map(item =>(
-            <div className='followerCard'>
-                <h1>{item.login}</h1>
+            <Card className='followerCard'>
+                <Heading>{item.login}</Heading>
                 <img width='100px'src={item.avatar_url} alt={item.login}/>
                 <p>Follow {item.login}<a href={item.html_url}> Here</a></p>
-            </div>
+            </Card>
             ))}
         </div>
       )

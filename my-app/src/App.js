@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 // Styles
 const AppContainer = styled.div`
-margin: 0 auto;
+background-color:#04ffee;
 `;
 
 class App extends React.Component {
